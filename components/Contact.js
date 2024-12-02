@@ -12,11 +12,7 @@ const Contact = () => {
   const [state, setState] = useState(initState);
   const { values, isLoading, error } = state;
 
-  const handleChange = ({ target }) =>{
-    const {name,Value} =target;
-    if (name ==="name"&& /\d/.test(value)){
-      return;
-    }
+  const handleChange = ({ target }) =>
     setState((prev) => ({
       ...prev,
       values: {
@@ -82,6 +78,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="Your Name?"
               className="bg-yellow-50 py-4 px-6 placeholder:text-secondary text-black rounded-lg outline-none border-none font-medium"
+              pattern="[A-Za-z\s]*"
             />
           </label>
           <label className="flex flex-col">
