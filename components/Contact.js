@@ -12,7 +12,11 @@ const Contact = () => {
   const [state, setState] = useState(initState);
   const { values, isLoading, error } = state;
 
-  const handleChange = ({ target }) =>
+  const handleChange = ({ target }) =>{
+    const {name,Value} =target;
+    if (name ==="name"&& /\d/.test(value)){
+      return;
+    }
     setState((prev) => ({
       ...prev,
       values: {
@@ -73,7 +77,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
-              name="Name*"
+              name="name"
               value={values.name}
               onChange={handleChange}
               placeholder="Your Name?"
@@ -84,7 +88,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your email</span>
             <input
               type="email"
-              name="email*"
+              name="email"
               value={values.email}
               onChange={handleChange}
               placeholder="Email Address?"
@@ -95,7 +99,7 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
-              name="Message*"
+              name="message"
               value={values.message}
               onChange={handleChange}
               placeholder="What you want to say?"
