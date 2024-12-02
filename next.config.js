@@ -12,6 +12,9 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    domains: ["github.com", "fonts.gstatic.com"],
+  },
 };
 
 module.exports = nextConfig;
