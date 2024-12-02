@@ -6,7 +6,7 @@ function ProjectItems() {
   const projects = [
     {
       title: "Assurence",
-      imageUrl: "/project1.png",
+      imageUrl: "/Project1.jpeg",
       linkUrl: "https://github.com/yassine-ux-dev/Assurence", // Add the appropriate link URL here
     },
     {
