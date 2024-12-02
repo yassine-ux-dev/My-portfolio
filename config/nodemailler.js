@@ -15,4 +15,4 @@ export const mailOptions = {
   from: email,
   to: email,
 };
-export const nextConfig = { images: { domains: ["github.com"] } };
+export const nextConfig = { images: { domains: ["github.com",'fonts.gstatic.com'] } };
